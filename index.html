@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OrganiCo® | Brand Concept &amp; Streetwear Consciente — João Felix</title>
+<meta name="description" content="OrganiCo®: Muito mais do que a rua. Projeto conceitual de streetwear sustentável, upcycling de brechós, embalagens plantáveis e tipografia alternativa.">
+<meta name="theme-color" content="#171512">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #171512;
+    color: #f4f1ea;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Topbar */
+  .top {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(23, 21, 18, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .bar {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
+  .bar nav {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .bar nav a:hover { color: #fefdd7; }
+  .btn-hub {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 99px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    transition: all 0.25s ease;
+  }
+  .btn-hub:hover {
+    background: #fefdd7;
+    color: #171512;
+    border-color: #fefdd7;
+  }
+
+  main {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 76px 0 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(254, 253, 215, 0.08);
+    border: 1px solid rgba(254, 253, 215, 0.22);
+    color: #fefdd7;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 22px;
+  }
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8fb376;
+  }
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(54px, 10vw, 138px);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero h1 span {
+    color: #8fb376;
+  }
+  .hero-lead {
+    font-size: clamp(18px, 2.2vw, 24px);
+    color: #f4f1ea;
+    max-width: 760px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: #b9b29c;
+    max-width: 660px;
+    line-height: 1.65;
+  }
+
+  /* Seções Gerais */
+  .section-block {
+    padding: 72px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #b9b29c;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin-bottom: 36px;
+  }
+  .section-intro {
+    font-size: 16px;
+    color: #d6d0c4;
+    max-width: 720px;
+    margin-top: -20px;
+    margin-bottom: 36px;
+    line-height: 1.6;
+  }
+
+  /* Manifesto em 2 Colunas */
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .manifesto-quote {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(26px, 3.2vw, 38px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #fefdd7;
+  }
+  .manifesto-text p {
+    font-size: 16px;
+    color: #d6d0c4;
+    margin-bottom: 18px;
+  }
+
+  /* Pilares da Marca */
+  .pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .pilar-card {
+    background: #1c1a17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .pilar-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(143, 179, 118, 0.45);
+  }
+  .pilar-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #8fb376;
+    margin-bottom: 20px;
+  }
+  .pilar-card h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .pilar-card p {
+    font-size: 15px;
+    color: #b9b29c;
+    line-height: 1.6;
+  }
+
+  /* Embalagens & Experiência de Envio */
+  .packaging-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .pack-featured {
+    background: linear-gradient(145deg, #211f1b 0%, #191714 100%);
+    border: 1px solid rgba(143, 179, 118, 0.38);
+    border-radius: 22px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pack-tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    border-radius: 99px;
+    background: rgba(143, 179, 118, 0.16);
+    color: #8fb376;
+    margin-bottom: 20px;
+  }
+  .pack-featured h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: #fefdd7;
+  }
+  .pack-featured p {
+    font-size: 15px;
+    color: #d6d0c4;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .pack-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .pack-chip {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f4f1ea;
+  }
+  .pack-side {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .pack-subcard {
+    background: #1c1a17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px;
+    flex: 1;
+    transition: border-color 0.35s ease;
+  }
+  .pack-subcard:hover {
+    border-color: rgba(254, 253, 215, 0.3);
+  }
+  .pack-subcard .sub-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #b9b29c;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .pack-subcard h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .pack-subcard p {
+    font-size: 14px;
+    color: #b9b29c;
+    line-height: 1.6;
+  }
+
+  /* Vitrine Visual (Pronta para receber suas imagens) */
+  .vitrine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .asset-slot {
+    background: #1c1a17;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 28px;
+    color: #b9b29c;
+  }
+  .asset-slot strong {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f4f1ea;
+    margin-bottom: 6px;
+  }
+  .asset-slot span {
+    font-size: 13px;
+    max-width: 260px;
+  }
+
+  /* Roadmap do Projeto */
+  .roadmap-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .roadmap-step {
+    background: #1c1a17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .roadmap-step.current {
+    border-color: rgba(143, 179, 118, 0.5);
+  }
+  .step-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #b9b29c;
+    margin-bottom: 14px;
+  }
+  .roadmap-step.current .step-tag {
+    background: rgba(143, 179, 118, 0.16);
+    color: #8fb376;
+  }
+  .roadmap-step h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .roadmap-step p {
+    font-size: 14px;
+    color: #b9b29c;
+  }
+
+  footer {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 32px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #b9b29c;
+  }
+  footer a:hover { color: #fefdd7; }
+
+  @media (max-width: 860px) {
+    .manifesto-grid,
+    .packaging-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 640px) {
+    .bar { padding: 14px 18px; }
+    .bar nav { display: none; }
+    main { padding: 0 18px 72px; }
+  }
+</style>
+</head>
+<body id="topo">
+
+<div class="top">
+  <header class="bar">
+    <a class="logo" href="#topo">JFELIX®</a>
+    <nav aria-label="Principal">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#embalagens">Embalagens</a>
+      <a href="#identidade">Identidade</a>
+      <a href="#roadmap">Etapas</a>
+    </nav>
+    <a class="btn-hub" href="https://jfeelix-hub.vercel.app/">VOLTAR AO HUB ↗</a>
+  </header>
+</div>
+
+<main>
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      Projeto Conceitual em Desenvolvimento · 2026
+    </div>
+    <h1 id="h-hero">Organi<span>Co</span>®</h1>
+    <p class="hero-lead">
+      Muito mais do que o street. Uma marca orgânica, consciente e pensada para ressignificar a forma como vestimos a cultura urbana.
+    </p>
+    <p class="hero-sub">
+      Direção criativa, identidade visual e desenvolvimento de produto unindo matérias-primas ecológicas, curadoria circular de brechós, embalagens plantáveis e tipografia contemporânea.
+    </p>
+  </section>
+
+  <!-- 2. MANIFESTO -->
+  <section id="manifesto" class="section-block">
+    <p class="section-label">01 / Posicionamento</p>
+    <h2 class="section-title">Muito mais do que a rua</h2>
+    <div class="manifesto-grid">
+      <blockquote class="manifesto-quote">
+        “O streetwear nasceu como voz e atitude. A OrganiCo® leva essa expressão adiante: vestir consciência, respeitar o ciclo das coisas e democratizar o estilo.”
+      </blockquote>
+      <div class="manifesto-text">
+        <p>
+          A <strong>OrganiCo®</strong> surge da necessidade de romper com o consumo descartável dentro da moda urbana. O projeto parte do princípio de que atitude e responsabilidade ambiental caminham juntas — sem elitizar o acesso.
+        </p>
+        <p>
+          Cada coleção equilibra duas frentes complementares: peças produzidas com <strong>materiais ecológicos</strong> de baixo impacto e edições <strong>personalizadas de upcycling</strong>, resgatando roupas de bazares e brechós para ganhar nova vida, identidade gráfica e valor acessível.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PILARES -->
+  <section id="pilares" class="section-block">
+    <p class="section-label">02 / Arquitetura da Marca</p>
+    <h2 class="section-title">Pilares OrganiCo®</h2>
+    <div class="pilares-grid">
+      <article class="pilar-card">
+        <div>
+          <div class="pilar-num">01 — CONSCIÊNCIA</div>
+          <h3>Materiais Ecológicos</h3>
+          <p>
+            Escolha de tecidos sustentáveis, fibras naturais e processos de estamparia que reduzem o impacto ambiental desde a origem até o acabamento final.
+          </p>
+        </div>
+      </article>
+
+      <article class="pilar-card">
+        <div>
+          <div class="pilar-num">02 — CIRCULARIDADE &amp; ACESSO</div>
+          <h3>Upcycling de Brechós</h3>
+          <p>
+            Coleções personalizadas que resgatam peças antigas de bazares e brechós, devolvendo personalidade única a cada roupa com um valor mais acessível ao público.
+          </p>
+        </div>
+      </article>
+
+      <article class="pilar-card">
+        <div>
+          <div class="pilar-num">03 — LINGUAGEM VISUAL</div>
+          <h3>Estampas &amp; Tipografia</h3>
+          <p>
+            Gráficos com estética streetwear autoral combinados a coleções guiadas por frases de efeito, explorando tipografias alternativas, experimentais e atuais.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. EMBALAGENS SUSTENTÁVEIS & EXPERIÊNCIA DE ENVIO -->
+  <section id="embalagens" class="section-block">
+    <p class="section-label">03 / Unboxing Circular</p>
+    <h2 class="section-title">Embalagens que geram vida</h2>
+    <p class="section-intro">
+      A responsabilidade ambiental da OrganiCo® não termina na peça: todo o sistema de envio foi projetado para eliminar o descarte plástico e transformar a entrega em uma experiência interativa.
+    </p>
+
+    <div class="packaging-grid">
+      <!-- Destaque Principal: Latas Colecionáveis & Plantio -->
+      <article class="pack-featured">
+        <div>
+          <span class="pack-tag">Edição Colecionável &amp; Plantável</span>
+          <h3>Latas Personalizadas &amp; Kit de Plantio</h3>
+          <p>
+            As peças podem ser enviadas dentro de <strong>latas exclusivas e colecionáveis</strong> com artes da marca, projetadas para serem reutilizadas diretamente como <strong>vaso de plantio</strong> após o unboxing.
+          </p>
+          <p>
+            No fechamento da compra, o cliente escolhe gratuitamente (<strong>sem custo adicional</strong>) entre diferentes opções de <strong>sementes de plantas</strong> para cultivar na própria lata — conectando quem veste a marca ao ciclo natural.
+          </p>
+        </div>
+        <div class="pack-highlights">
+          <span class="pack-chip">Latas colecionáveis</span>
+          <span class="pack-chip">Reuso como vaso</span>
+          <span class="pack-chip">Sementes à escolha no checkout</span>
+          <span class="pack-chip">Sem custo adicional</span>
+        </div>
+      </article>
+
+      <!-- Coluna Lateral: Alternativa Carimbada + Adesivos -->
+      <div class="pack-side">
+        <article class="pack-subcard">
+          <span class="sub-label">Opção Minimalista</span>
+          <h4>Embalagem Ecológica Carimbada</h4>
+          <p>
+            Para quem optar por não receber a lata colecionável, o pedido segue em embalagens 100% sustentáveis e biodegradáveis, finalizadas artesanalmente com <strong>carimbos personalizados</strong> da OrganiCo®.
+          </p>
+        </article>
+
+        <article class="pack-subcard">
+          <span class="sub-label">Brinde em Todos os Envios</span>
+          <h4>Adesivos de Sátira &amp; Atitude</h4>
+          <p>
+            Todos os envios acompanham uma seleção de <strong>adesivos exclusivos</strong> com sátiras ácidas ao consumo tradicional e frases motivacionais com tipografia urbana.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. IDENTIDADE VISUAL & COLEÇÃO CONCEITO -->
+  <section id="identidade" class="section-block">
+    <p class="section-label">04 / Universo Visual &amp; Peças</p>
+    <h2 class="section-title">Identidade, Estampas &amp; Latas</h2>
+    <div class="vitrine-grid">
+      <div class="asset-slot">
+        <strong>Logotipo &amp; Carimbos</strong>
+        <span>Espaço reservado para o logo principal, variações e artes dos carimbos da OrganiCo®.</span>
+      </div>
+      <div class="asset-slot">
+        <strong>Estampas &amp; Adesivos</strong>
+        <span>Espaço reservado para as composições tipográficas, frases de efeito e sátiras.</span>
+      </div>
+      <div class="asset-slot">
+        <strong>Latas &amp; Peças Conceito</strong>
+        <span>Espaço reservado para os mockups das latas colecionáveis, roupas ecológicas e upcycling.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ROADMAP -->
+  <section id="roadmap" class="section-block" style="border-bottom: none; padding-bottom: 0;">
+    <p class="section-label">05 / Status do Projeto</p>
+    <h2 class="section-title">Roadmap de Construção</h2>
+    <div class="roadmap-list">
+      <div class="roadmap-step current">
+        <span class="step-tag">Em andamento</span>
+        <h4>01. Identidade &amp; Conceito</h4>
+        <p>Definição de manifesto, naming, sistema visual, tipografia, embalagens plantáveis e primeiras estampas.</p>
+      </div>
+      <div class="roadmap-step">
+        <span class="step-tag">Próxima etapa</span>
+        <h4>02. Curadoria &amp; Protótipos</h4>
+        <p>Seleção de fornecedores ecológicos, garimpo em brechós/bazares, protótipos das latas e sementes.</p>
+      </div>
+      <div class="roadmap-step">
+        <span class="step-tag">Futuro</span>
+        <h4>03. Lookbook &amp; Drop 01</h4>
+        <p>Produção fotográfica editorial das peças únicas, unboxing completo e lançamento da primeira coleção.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>João Victor Felix Ramalho · Sorocaba — SP</span>
+  <span>ORGANICO® · CONCEITO POR JFELIX® · 2026</span>
+  <a href="#topo">Voltar ao topo ↑</a>
+</footer>
+
+</body>
+</html>
