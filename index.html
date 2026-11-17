@@ -102,18 +102,19 @@
     border-radius: 50%;
     background: #8fb376;
   }
-  .hero h1 {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(54px, 10vw, 138px);
-    font-weight: 800;
-    line-height: 0.9;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
+  
+  /* Ajuste para o Logo parecer integrado ao fundo (sem parecer um bloco quadrado) */
+  .hero-logo-wrapper {
+    margin: 10px 0 32px 0;
   }
-  .hero h1 span {
-    color: #8fb376;
+  .hero-logo {
+    max-width: min(520px, 100%);
+    height: auto;
+    display: block;
+    mix-blend-mode: screen; /* Funde o fundo preto da imagem com o site escuro */
+    filter: contrast(1.1);
   }
+
   .hero-lead {
     font-size: clamp(18px, 2.2vw, 24px);
     color: #f4f1ea;
@@ -323,7 +324,7 @@
     line-height: 1.6;
   }
 
-  /* Vitrine Visual (Pronta para receber suas imagens) */
+  /* Vitrine Visual */
   .vitrine-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -447,7 +448,12 @@
       <span class="status-dot"></span>
       Projeto Conceitual em Desenvolvimento · 2026
     </div>
-    <h1 id="h-hero">Organi<span>Co</span>®</h1>
+    
+    <!-- LOGOTIPO Y2K SUBSTITUINDO O TÍTULO TEXTUAL -->
+    <div class="hero-logo-wrapper">
+      <img src="logo-organico.png" alt="OrganiCo®" class="hero-logo" id="h-hero">
+    </div>
+
     <p class="hero-lead">
       Muito mais do que o street. Uma marca orgânica, consciente e pensada para ressignificar a forma como vestimos a cultura urbana.
     </p>
