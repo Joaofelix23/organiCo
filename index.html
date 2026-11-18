@@ -356,53 +356,11 @@
     max-width: 260px;
   }
 
-  /* Roadmap do Projeto */
-  .roadmap-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-  .roadmap-step {
-    background: #1c1a17;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px;
-  }
-  .roadmap-step.current {
-    border-color: rgba(143, 179, 118, 0.5);
-  }
-  .step-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 4px 10px;
-    border-radius: 99px;
-    background: rgba(255, 255, 255, 0.06);
-    color: #b9b29c;
-    margin-bottom: 14px;
-  }
-  .roadmap-step.current .step-tag {
-    background: rgba(143, 179, 118, 0.16);
-    color: #8fb376;
-  }
-  .roadmap-step h4 {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .roadmap-step p {
-    font-size: 14px;
-    color: #b9b29c;
-  }
-
   footer {
     max-width: 1360px;
     margin: 0 auto;
     padding: 32px 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -437,7 +395,6 @@
       <a href="#pilares">Pilares</a>
       <a href="#embalagens">Embalagens</a>
       <a href="#identidade">Identidade</a>
-      <a href="#roadmap">Etapas</a>
     </nav>
     <a class="btn-hub" href="https://jfeelix-hub.vercel.app/">VOLTAR AO HUB ↗</a>
   </header>
@@ -588,7 +545,7 @@
   </section>
 
   <!-- 5. IDENTIDADE VISUAL & COLEÇÃO CONCEITO -->
-  <section id="identidade" class="section-block">
+  <section id="identidade" class="section-block" style="border-bottom: none; padding-bottom: 0;">
     <p class="section-label">04 / Universo Visual &amp; Peças</p>
     <h2 class="section-title">Identidade, Estampas &amp; Latas</h2>
     <div class="vitrine-grid">
@@ -603,29 +560,6 @@
       <div class="asset-slot">
         <strong>Latas &amp; Peças Conceito</strong>
         <span>Espaço reservado para os mockups das latas colecionáveis, roupas ecológicas e upcycling.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. ROADMAP -->
-  <section id="roadmap" class="section-block" style="border-bottom: none; padding-bottom: 0;">
-    <p class="section-label">05 / Status do Projeto</p>
-    <h2 class="section-title">Roadmap de Construção</h2>
-    <div class="roadmap-list">
-      <div class="roadmap-step current">
-        <span class="step-tag">Em andamento</span>
-        <h4>01. Identidade &amp; Conceito</h4>
-        <p>Definição de manifesto, naming, sistema visual, tipografia, embalagens plantáveis e primeiras estampas.</p>
-      </div>
-      <div class="roadmap-step">
-        <span class="step-tag">Próxima etapa</span>
-        <h4>02. Curadoria &amp; Protótipos</h4>
-        <p>Seleção de fornecedores ecológicos, garimpo em brechós/bazares, protótipos das latas e sementes.</p>
-      </div>
-      <div class="roadmap-step">
-        <span class="step-tag">Futuro</span>
-        <h4>03. Lookbook &amp; Drop 01</h4>
-        <p>Produção fotográfica editorial das peças únicas, unboxing completo e lançamento da primeira coleção.</p>
       </div>
     </div>
   </section>
