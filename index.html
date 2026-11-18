@@ -103,7 +103,6 @@
     background: #8fb376;
   }
   
-  /* Ajuste para o Logo Y2K se fundir perfeitamente ao fundo escuro */
   .hero-logo-wrapper {
     margin: 10px 0 32px 0;
   }
@@ -223,21 +222,78 @@
     line-height: 1.6;
   }
 
-  /* Embalagens & Experiência de Envio */
+  /* Cards de Embalagens com Imagem ao Lado do Texto */
   .packaging-grid {
     display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 24px;
-    align-items: stretch;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
-  .pack-featured {
-    background: linear-gradient(145deg, #211f1b 0%, #191714 100%);
-    border: 1px solid rgba(143, 179, 118, 0.38);
+  
+  .pack-card-row {
+    background: #1c1a17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 22px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: stretch;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .pack-card-row:hover {
+    transform: translateY(-4px);
+    border-color: rgba(143, 179, 118, 0.4);
+  }
+
+  /* Slot de Imagem integrado ao lado */
+  .pack-media {
+    background: #13110f;
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+  .pack-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .pack-placeholder {
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    width: 85%;
+    height: 80%;
+    margin: 24px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #b9b29c;
+  }
+  .pack-placeholder strong {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #f4f1ea;
+    margin-bottom: 6px;
+  }
+  .pack-placeholder span {
+    font-size: 12px;
+    font-family: monospace;
+    color: #8fb376;
+  }
+
+  /* Conteúdo do Card */
+  .pack-content {
     padding: 36px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
   }
   .pack-tag {
     display: inline-block;
@@ -250,78 +306,40 @@
     border-radius: 99px;
     background: rgba(143, 179, 118, 0.16);
     color: #8fb376;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-  .pack-featured h3 {
+  .pack-content h3 {
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: clamp(24px, 2.5vw, 30px);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 16px;
+    line-height: 1.15;
+    margin-bottom: 14px;
     color: #fefdd7;
   }
-  .pack-featured p {
+  .pack-content p {
     font-size: 15px;
-    color: #d6d0c4;
+    color: #b9b29c;
     line-height: 1.65;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .pack-highlights {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     margin-top: 12px;
-    padding-top: 20px;
+    padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   .pack-chip {
     font-size: 12px;
     font-weight: 600;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 99px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #f4f1ea;
-  }
-  .pack-side {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .pack-subcard {
-    background: #1c1a17;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 28px;
-    flex: 1;
-    transition: border-color 0.35s ease;
-  }
-  .pack-subcard:hover {
-    border-color: rgba(254, 253, 215, 0.3);
-  }
-  .pack-subcard .sub-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #b9b29c;
-    margin-bottom: 10px;
-    display: block;
-  }
-  .pack-subcard h4 {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-  }
-  .pack-subcard p {
-    font-size: 14px;
-    color: #b9b29c;
-    line-height: 1.6;
   }
 
   /* Vitrine Visual */
@@ -416,7 +434,8 @@
 
   @media (max-width: 860px) {
     .manifesto-grid,
-    .packaging-grid { grid-template-columns: 1fr; gap: 24px; }
+    .pack-card-row { grid-template-columns: 1fr; }
+    .pack-media { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); min-height: 220px; }
   }
   @media (max-width: 640px) {
     .bar { padding: 14px 18px; }
@@ -449,7 +468,6 @@
       Projeto em Desenvolvimento · 2026
     </div>
     
-    <!-- LOGOTIPO Y2K APONTANDO CORRETAMENTE PARA A PASTA IMG -->
     <div class="hero-logo-wrapper">
       <img src="img/logo-organico.png" alt="OrganiCo®" class="hero-logo" id="h-hero">
     </div>
@@ -527,9 +545,16 @@
     </p>
 
     <div class="packaging-grid">
-      <!-- Destaque Principal: Latas Colecionáveis & Plantio -->
-      <article class="pack-featured">
-        <div>
+      <!-- Card 1: Latas Personalizadas -->
+      <article class="pack-card-row">
+        <div class="pack-media">
+          <!-- Substitua o bloco abaixo por: <img src="img/Latas Personalizadas.png" alt="Latas Personalizadas"> -->
+          <div class="pack-placeholder">
+            <strong>Latas Personalizadas</strong>
+            <span>img/Latas Personalizadas</span>
+          </div>
+        </div>
+        <div class="pack-content">
           <span class="pack-tag">Edição Colecionável &amp; Plantável</span>
           <h3>Latas Personalizadas &amp; Kit de Plantio</h3>
           <p>
@@ -538,33 +563,50 @@
           <p>
             No fechamento da compra, o cliente escolhe gratuitamente (<strong>sem custo adicional</strong>) entre diferentes opções de <strong>sementes de plantas</strong> para cultivar na própria lata — conectando quem veste a marca ao ciclo natural.
           </p>
-        </div>
-        <div class="pack-highlights">
-          <span class="pack-chip">Latas colecionáveis</span>
-          <span class="pack-chip">Reuso como vaso</span>
-          <span class="pack-chip">Sementes à escolha no checkout</span>
-          <span class="pack-chip">Sem custo adicional</span>
+          <div class="pack-highlights">
+            <span class="pack-chip">Latas colecionáveis</span>
+            <span class="pack-chip">Reuso como vaso</span>
+            <span class="pack-chip">Sementes no checkout</span>
+            <span class="pack-chip">Sem custo adicional</span>
+          </div>
         </div>
       </article>
 
-      <!-- Coluna Lateral: Alternativa Carimbada + Adesivos -->
-      <div class="pack-side">
-        <article class="pack-subcard">
-          <span class="sub-label">Opção Minimalista</span>
-          <h4>Embalagem Ecológica Carimbada</h4>
+      <!-- Card 2: Embalagem Ecológica -->
+      <article class="pack-card-row">
+        <div class="pack-media">
+          <!-- Substitua o bloco abaixo por: <img src="img/Embalagem Ecológica.png" alt="Embalagem Ecológica"> -->
+          <div class="pack-placeholder">
+            <strong>Embalagem Ecológica</strong>
+            <span>img/Embalagem Ecológica</span>
+          </div>
+        </div>
+        <div class="pack-content">
+          <span class="pack-tag">Opção Minimalista</span>
+          <h3>Embalagem Ecológica Carimbada</h3>
           <p>
             Para quem optar por não receber a lata colecionável, o pedido segue em embalagens 100% sustentáveis e biodegradáveis, finalizadas artesanalmente com <strong>carimbos personalizados</strong> da OrganiCo®.
           </p>
-        </article>
+        </div>
+      </article>
 
-        <article class="pack-subcard">
-          <span class="sub-label">Brinde em Todos os Envios</span>
-          <h4>Adesivos de Sátira &amp; Atitude</h4>
+      <!-- Card 3: Adesivos de Sátira -->
+      <article class="pack-card-row">
+        <div class="pack-media">
+          <!-- Substitua o bloco abaixo por: <img src="img/Adesivos de Sátira.png" alt="Adesivos de Sátira"> -->
+          <div class="pack-placeholder">
+            <strong>Adesivos de Sátira</strong>
+            <span>img/Adesivos de Sátira</span>
+          </div>
+        </div>
+        <div class="pack-content">
+          <span class="pack-tag">Brinde em Todos os Envios</span>
+          <h3>Adesivos de Sátira &amp; Atitude</h3>
           <p>
             Todos os envios acompanham uma seleção de <strong>adesivos exclusivos</strong> com sátiras ácidas ao consumo tradicional e frases motivacionais com tipografia urbana.
           </p>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
