@@ -154,7 +154,7 @@
   .section-intro {
     font-size: 16px;
     color: #d6d0c4;
-    max-width: 720px;
+    max-width: 760px;
     margin-top: -20px;
     margin-bottom: 36px;
     line-height: 1.6;
@@ -299,10 +299,10 @@
     margin-bottom: 14px;
   }
 
-  /* Vitrine Visual */
+  /* Vitrine Visual (4 Cards: Logo, 2 Moletons e 1 Ecobag) */
   .vitrine-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
   .asset-slot {
@@ -317,6 +317,15 @@
     text-align: center;
     padding: 28px;
     color: #b9b29c;
+    overflow: hidden;
+    position: relative;
+  }
+  .asset-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
   }
   .asset-slot strong {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -326,7 +335,9 @@
     margin-bottom: 6px;
   }
   .asset-slot span {
-    font-size: 13px;
+    font-size: 12px;
+    font-family: monospace;
+    color: #8fb376;
     max-width: 260px;
   }
 
@@ -356,6 +367,7 @@
     .bar { padding: 14px 18px; }
     .bar nav { display: none; }
     main { padding: 0 18px 72px; }
+    .vitrine-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -506,22 +518,33 @@
     </div>
   </section>
 
-  <!-- 5. IDENTIDADE VISUAL & COLEÇÃO CONCEITO -->
+  <!-- 5. IDENTIDADE VISUAL & LIFESTYLE -->
   <section id="identidade" class="section-block" style="border-bottom: none; padding-bottom: 0;">
-    <p class="section-label">04 / Universo Visual &amp; Peças</p>
-    <h2 class="section-title">Identidade, Estampas &amp; Latas</h2>
+    <p class="section-label">04 / Universo Visual &amp; Lifestyle</p>
+    <h2 class="section-title">Identidade &amp; Lifestyle</h2>
+    <p class="section-intro">
+      <strong>Modelo de negócio:</strong> marca de lifestyle que utiliza o vestuário como uma das frentes, mas expande a identidade para produtos de casa, acessórios, cultura e cotidiano.
+    </p>
     <div class="vitrine-grid">
       <div class="asset-slot">
-        <strong>Logotipo &amp; Carimbos</strong>
-        <span>Espaço reservado para o logo principal, variações e artes dos carimbos da OrganiCo®.</span>
+        <!-- Substitua o conteúdo abaixo por: <img src="img/Logo OrganiCo.png" alt="Logo OrganiCo"> -->
+        <strong>Logo OrganiCo®</strong>
+        <span>img/Logo OrganiCo.png</span>
       </div>
       <div class="asset-slot">
-        <strong>Estampas &amp; Adesivos</strong>
-        <span>Espaço reservado para as composições tipográficas, frases de efeito e sátiras.</span>
+        <!-- Substitua o conteúdo abaixo por: <img src="img/Moletom 01.png" alt="Moletom 01"> -->
+        <strong>Moletom 01</strong>
+        <span>img/Moletom 01.png</span>
       </div>
       <div class="asset-slot">
-        <strong>Latas &amp; Peças Conceito</strong>
-        <span>Espaço reservado para os mockups das latas colecionáveis, roupas ecológicas e upcycling.</span>
+        <!-- Substitua o conteúdo abaixo por: <img src="img/Moletom 02.png" alt="Moletom 02"> -->
+        <strong>Moletom 02</strong>
+        <span>img/Moletom 02.png</span>
+      </div>
+      <div class="asset-slot">
+        <!-- Substitua o conteúdo abaixo por: <img src="img/Ecobag.png" alt="Ecobag"> -->
+        <strong>Ecobag</strong>
+        <span>img/Ecobag.png</span>
       </div>
     </div>
   </section>
